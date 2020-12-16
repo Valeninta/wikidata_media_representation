@@ -223,4 +223,4 @@ print('male count: '+str(gender_count['male'])+', male ratio: '+str(gender_count
 print('female count: '+str(gender_count['female'])+', female ratio: '+str(gender_count['female']/len(crew)))
 print('unsure count: '+str(gender_count['unsure'])+', unsure ratio: '+str(gender_count['unsure']/len(crew)))
 print()
-print("Genderize.io's gender attribution was only accepted when its probability was at least 90%. Otherwise it was counted towards 'unsure'.  You can find an overview about all crew members and their members in the file crew_gender_"+film_title+".csv.")
+print("Genderize.io's gender attribution was only accepted when its probability was at least 90%. Otherwise it was counted towards 'unsure'.  You can find an overview about all crew members and their (probable) gender in the file crew_gender_"+film_title+".csv.")
