@@ -18,4 +18,4 @@ This script is written in python3. It uses the BeautifulSoup (https://pypi.org/p
 To get gender information from imdb's name.basics.tsv you need to download it here: https://datasets.imdbws.com/. You should place it into the same directory as this script.
 
 # Using this script
-After downloading this script, open a terminal in the same directory as the script. Start it using ```python3 genderize_film.py```. You will be prompted to add a film title and the imdb id.
+After downloading this script, open a terminal in the same directory as the script. Start it using ```python3 genderize_film.py```. You will be prompted to add a film title and the imdb id. As a film title you can use anything you like. It will be only used to generate the filename of the results file.
