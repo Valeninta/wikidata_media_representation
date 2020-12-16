@@ -7,7 +7,7 @@ Script for getting the female/male ratio of the crew of a given film. Inspired b
 4. Using genderize.io: get for each remaining crew member's given name the gender attribution in genderize.io, including the probabilty that the assignment is correct. The information is stored in a file names_to_gender.csv that may be reused in later runs.
 5. Print a Breakdown of the results (number/share of crew members with male/female/unsure gender attribution). When the gender was derived from the given name only gender attributions with a probabily >= 90% are accepted. All other crew members are counted towards the "unsure" category.
 
-The results are written into a file crew_gender_ + film_title + csv and can be scrutinized there, if necessary.
+The results are written into a file crew_gender_```film_title```.csv and can be scrutinized there, if necessary.
 
 # Prerequisites
 This script is written in python3. It uses the BeautifulSoup (https://pypi.org/project/beautifulsoup4) and Genderize (https://github.com/SteelPangolin/genderize) library.
