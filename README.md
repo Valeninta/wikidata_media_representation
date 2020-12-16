@@ -4,10 +4,10 @@ Script for getting the female/male ratio of the crew of a given film. Inspired b
 1. Get all crew members from imdb's full credits (excluding transportation department, miscellaneous and stunt department)
 2. Using the imdb Id: check for each crew member if there is an entry in wikidata with a gender attribution. If yes, take this.
 3. (Optional) Using imdb's name.basics. tsv: check for each remaining crew member if they are mentioned as actor or actress. If as actor, assign gender "male", if as actress, assign gender "female". You can download the file here: https://datasets.imdbws.com/
-4. Using genderize.io: get for each remaining crew member's given name the gender attribution in genderize.io, including the probabilty that the assignment is correct. The information is stored in a file names_to_gender.csv that may be reused in late runs.
-5. Print a Breakdown of the results (number/share of crew members with male/female/unsure gender attribution). When the gender was derived from the given name only gender attributions with a probabily >= 90% were accepted. All other crew members were counted towards the "unsure" category.
+4. Using genderize.io: get for each remaining crew member's given name the gender attribution in genderize.io, including the probabilty that the assignment is correct. The information is stored in a file names_to_gender.csv that may be reused in later runs.
+5. Print a Breakdown of the results (number/share of crew members with male/female/unsure gender attribution). When the gender was derived from the given name only gender attributions with a probabily >= 90% are accepted. All other crew members are counted towards the "unsure" category.
 
-The results are written into a file crew_gender_ + film_title
+The results are written into a file crew_gender_ + film_title + csv and can be scrutinized there, if necessary.
 
 # Prerequisites
 This script is written in python3. It uses the BeautifulSoup (https://pypi.org/project/beautifulsoup4) and Genderize (https://github.com/SteelPangolin/genderize) library.
