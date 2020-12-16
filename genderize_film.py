@@ -205,7 +205,7 @@ print()
 
 with open('crew_gender_' + film_title + '.csv','a') as file:
     for crew_member in [crew_member for crew_member in crew.values() if 'source' in crew_member.keys() and crew_member['source'] == 'Genderize.io']:
-        print(crew_member['imdb']+","+crew_member['name']+','+crew_member['given_name']+","+str(crew_member['categories'])+","+crew_member['gender']+","+str(crew_member['gender_probability'])+","+crew_member['source'])
+        print(crew_member['imdb']+","+crew_member['name']+','+crew_member['given_name']+","+str(crew_member['categories'])+","+str(crew_member['gender'])+","+str(crew_member['gender_probability'])+","+crew_member['source'])
         file.write(str(crew_member['imdb'])+","+str(crew_member['name'])+','+str(crew_member['given_name'])+',"'+str(crew_member['categories'])+'",'+str(crew_member['gender'])+","+str(crew_member['gender_probability'])+","+str(crew_member['source'])+"\n")
 
 gender_count = {'female':0,'male':0,'unsure':0}
