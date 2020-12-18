@@ -11,11 +11,18 @@ The results are written into a file crew_gender_```film_title```.csv and can be 
 
 # Prerequisites
 This script is written in python3. It uses the BeautifulSoup (https://pypi.org/project/beautifulsoup4) and Genderize (https://github.com/SteelPangolin/genderize) library.
-1. You need to install python3. Installation instructions: https://wiki.python.org/moin/BeginnersGuide/Download
-2. You need to install BeautifulSoup: ```pip install beautifulsoup4```
-3. You need to install Genderize: ```pip install git+https://github.com/SteelPangolin/genderize```
+1. Install python3 if you don't have it installed. Installation instructions: https://wiki.python.org/moin/BeginnersGuide/Download
+ - If you are new to Python you can just install Anaconda instead: https://anaconda.org/
+ - After installation open an Anaconda prompt (in Windows from start menu)
+ - Install pip as a package installer: ```conda install pip```
+ - Install git to get packages from github: ```conda install git```
+2. Install BeautifulSoup: ```pip install beautifulsoup4```
+3. Install Genderize: ```pip install git+https://github.com/SteelPangolin/genderize```
 
-To get gender information from imdb's name.basics.tsv you need to download it here: https://datasets.imdbws.com/. You should place it into the same directory as this script.
+## Optional data files to use
+To get gender information from imdb's name.basics.tsv download it here: https://datasets.imdbws.com/. You should place it into the same directory as this script.
 
 # Using this script
-After downloading this script, open a terminal in the same directory as the script. Start it using ```python3 genderize_film.py```. You will be prompted to add a film title and the imdb id. As a film title you can use anything you like. It will be only used to generate the filename of the results file.
+* In a terminal (e.g an Anaconda prompt) navigate into the directory where the python script is placed. (e.g., for Windows users, if your directory is C:\Users\Me\python_scripts, enter ```cd C:\Users\Me\python_scripts```)
+* Enter ```python3 genderize_film.py```
+* You will be prompted to add a film title and the imdb id. As a film title you can use anything you like. It will be only used to generate the filename of the results file.
