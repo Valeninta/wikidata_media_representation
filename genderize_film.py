@@ -47,13 +47,13 @@ def get_gender_from_wikidata(crew):
         start = start + 200
         stop = min(stop + 200, len(imdbs)+1)
         time.sleep(5)
-    with open('crew_gender_' + film_title + '.csv','a') as file:
+    with open('crew_gender_' + film_title + '.csv','a', encoding="utf-8") as file:
         for crew_member in [crew_member for crew_member in crew.values() if 'source' in crew_member.keys() and crew_member['source'] == 'wikidata']:
             print(crew_member['imdb']+","+crew_member['name']+','+crew_member['given_name']+","+str(crew_member['categories'])+","+crew_member['gender']+","+crew_member['gender_probability']+","+crew_member['source'])
             file.write(crew_member['imdb']+","+crew_member['name']+','+crew_member['given_name']+',"'+str(crew_member['categories'])+'",'+crew_member['gender']+","+crew_member['gender_probability']+","+crew_member['source']+"\n")    
 
 def get_gender_from_imdb(ungendered_imdbs):
-    file = open('name.basics.tsv','r')
+    file = open('name.basics.tsv','r', encoding="utf-8")
 
     for line in file:
         info = line.split('\t')
@@ -71,7 +71,7 @@ def get_gender_from_imdb(ungendered_imdbs):
             ungendered_imdbs.remove(info[0])
     file.close()
 
-    with open('crew_gender_' + film_title + '.csv','a') as file:
+    with open('crew_gender_' + film_title + '.csv','a', encoding="utf-8") as file:
         for crew_member in [crew_member for crew_member in crew.values() if 'source' in crew_member.keys() and crew_member['source'] == 'imdb names.basic.tsv']:
             print(crew_member['imdb']+","+crew_member['name']+','+crew_member['given_name']+','+str(crew_member['categories'])+','+crew_member['gender']+","+crew_member['gender_probability']+","+crew_member['source'])
             file.write(crew_member['imdb']+","+crew_member['name']+','+crew_member['given_name']+',"'+str(crew_member['categories'])+'",'+crew_member['gender']+","+crew_member['gender_probability']+","+crew_member['source']+"\n")
@@ -89,7 +89,7 @@ def get_gender_from_given_name(ungendered_imdbs):
     
     #trying to get gender from name file
     try:
-        with open('names_to_gender.csv','r') as file:
+        with open('names_to_gender.csv','r',encoding="utf-8") as file:
             for line in file:
                 info = line.split(',')
                 if info[0] in names:
@@ -107,7 +107,7 @@ def get_gender_from_given_name(ungendered_imdbs):
 
     start = 0
     stop = 9
-    namesfile = open("names_to_gender.csv",'a')
+    namesfile = open("names_to_gender.csv",'a',encoding="utf-8")
     while(start<=len(names_list)+1):
 
         #print("Getting gender of names "+str(names_list[start:stop+1]))
@@ -132,7 +132,7 @@ def get_crew_members_from_imdb(imdb):
 
 
     # if there is a file you like to use you need to remove the '#'
-    # with open("Downloads/imdb_"+film_title+".html") as fp:
+    # with open("Downloads/imdb_"+film_title+".html", encoding="utf-8") as fp:
     #    soup = BeautifulSoup(fp, 'html.parser')
 
     # Getting only the credit part of the page
@@ -171,7 +171,7 @@ film_title = str(input("Please enter the title of the film: ")).lower().replace(
 film_imdb = str(input("Please enter the imdb Id of the film (e.g. tt0059229): "))
 
 #creating csv to store the information
-with open('crew_gender_' + film_title + '.csv','a') as file:
+with open('crew_gender_' + film_title + '.csv','a', encoding="utf-8") as file:
     file.write('imdb,name,given_name,departments,gender,gender_probability,source\n')
 
 #getting crew members from imdb
@@ -203,7 +203,7 @@ print("========TRYING TO DERIVE GENDER FROM GIVEN NAME VIA GENDERIZE.IO========"
 get_gender_from_given_name(ungendered_imdbs)
 print()
 
-with open('crew_gender_' + film_title + '.csv','a') as file:
+with open('crew_gender_' + film_title + '.csv','a', encoding="utf-8") as file:
     for crew_member in [crew_member for crew_member in crew.values() if 'source' in crew_member.keys() and crew_member['source'] == 'Genderize.io']:
         print(crew_member['imdb']+","+crew_member['name']+','+crew_member['given_name']+","+str(crew_member['categories'])+","+str(crew_member['gender'])+","+str(crew_member['gender_probability'])+","+crew_member['source'])
         file.write(str(crew_member['imdb'])+","+str(crew_member['name'])+','+str(crew_member['given_name'])+',"'+str(crew_member['categories'])+'",'+str(crew_member['gender'])+","+str(crew_member['gender_probability'])+","+str(crew_member['source'])+"\n")
