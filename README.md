@@ -14,7 +14,7 @@ This script is written in python3. It uses the BeautifulSoup (https://pypi.org/p
 1. Install python3 if you don't have it installed. Installation instructions: https://wiki.python.org/moin/BeginnersGuide/Download
  - If you are new to Python you can just install Anaconda instead: https://anaconda.org/
  - After installation open an Anaconda prompt (in Windows from start menu)
- - Install pip as a package installer: ```conda install pip```
+ - Install pip as a package manager: ```conda install pip```
  - Install git to get packages from github: ```conda install git```
 2. Install BeautifulSoup: ```pip install beautifulsoup4```
 3. Install Genderize: ```pip install git+https://github.com/SteelPangolin/genderize```
