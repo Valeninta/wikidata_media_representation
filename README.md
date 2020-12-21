@@ -15,9 +15,9 @@ This script is written in python3. It uses the BeautifulSoup (https://pypi.org/p
  - If you are new to Python you can just install Anaconda instead: https://anaconda.org/
  - After installation open an Anaconda prompt (in Windows from start menu)
  - Install pip as a package manager: ```conda install pip```
- - Install git to get packages from github: ```conda install git```
+ - <s>Install git to get packages from github: ```conda install git```</s>
 2. Install BeautifulSoup: ```pip install beautifulsoup4```
-3. Install Genderize: ```pip install git+https://github.com/SteelPangolin/genderize```
+3. <s>Install Genderize: ```pip install git+https://github.com/SteelPangolin/genderize```</s>
 
 ## Optional data files to use
 To get gender information from imdb's name.basics.tsv download it here: https://datasets.imdbws.com/. You should place it into the same directory as this script.
