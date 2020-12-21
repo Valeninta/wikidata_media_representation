@@ -10,7 +10,7 @@ Script for getting the female/male ratio of the crew of a given film. Inspired b
 The results are written into a file crew_gender_```film_title```.csv and can be scrutinized there, if necessary.
 
 # Prerequisites
-This script is written in python3. It uses the BeautifulSoup (https://pypi.org/project/beautifulsoup4) and Genderize (https://github.com/SteelPangolin/genderize) library.
+This script is written in python3. It uses the BeautifulSoup (https://pypi.org/project/beautifulsoup4) <s>and Genderize (https://github.com/SteelPangolin/genderize) library</s>.
 1. Install python3 if you don't have it installed. Installation instructions: https://wiki.python.org/moin/BeginnersGuide/Download
  - If you are new to Python you can just install Anaconda instead: https://anaconda.org/
  - After installation open an Anaconda prompt (in Windows from start menu)
