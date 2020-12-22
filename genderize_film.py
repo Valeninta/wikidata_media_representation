@@ -107,7 +107,7 @@ def get_gender_from_given_name(ungendered_imdbs):
     start = 0
     stop = 9
     namesfile = open("names_to_gender.csv",'a')
-    while(start<=len(names_list)+1):
+    while(start<len(names_list)):
         name_string = ""
         for name in names_list[start:stop+1]:
             name_string = name_string+"name[]=" + name + "&"
