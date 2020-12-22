@@ -108,7 +108,7 @@ def get_gender_from_given_name(ungendered_imdbs):
     start = 0
     stop = 9
     namesfile = open("names_to_gender.csv",'a',encoding="utf-8")
-    while(start<=len(names_list)+1):
+    while(start<len(names_list)):
 
         #print("Getting gender of names "+str(names_list[start:stop+1]))
         gendered_names = Genderize().get(names_list[start:stop+1])
